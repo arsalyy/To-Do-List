@@ -27,7 +27,7 @@ const SignUp = () => {
 
       const { data: users } = await axios.get(apiEndpoint)
       for(let i = 0; users[i]; i++){
-        if(users[i].email == email){
+        if(users[i].email === email){
           isValid = 0;
         }
       }

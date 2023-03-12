@@ -26,14 +26,14 @@ const LogIn = () => {
 
       const { data: users } = await axios.get(apiEndpoint)
       for(let i = 0; users[i]; i++){
-        if(users[i].email == loginEmail){
+        if(users[i].email === loginEmail){
           present = 1;
           index = i;
         }
       }
 
       if(present){
-        if(users[index].password != loginPassword){
+        if(users[index].password !== loginPassword){
             alert("Password is Incorrect.");
         }
         else {

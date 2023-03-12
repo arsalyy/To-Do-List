@@ -4,7 +4,6 @@ import SearchBox from "../components/searchBox";
 import InputField from "../components/inputField";
 import Button from "../components/button";
 import Table from "../components/table";
-import { useHistory } from "react-router-dom";
 
 const apiEndpoint = "http://localhost:3000/api/tasks";
 
@@ -69,7 +68,7 @@ class ToDoList extends Component {
   };
 
   closeDialog = () => {
-    this.state.isDialogOpen = false;
+    this.setState({isDialogOpen: false});
     this.handleUpdate();
   };
 
